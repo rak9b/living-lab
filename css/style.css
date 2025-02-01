@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+.sora-font {
+    font-family: "Sora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.product_bg_img {
+    background: linear-gradient(to right bottom, #52db3a 15%, rgba(255, 255, 255, 0)), url("../image/vegetable-offer.png") no-repeat right bottom/70%;
+}
+
+.animation_div {
+    animation-name: running;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes running {
+    0%{
+        left: -20px;
+        top: -30px;
+        transform: rotate(0deg);
+    }
+    20%{
+        left: 100%;
+        top: -30px;
+        transform: rotate(0deg);
+        
+    }
+    40%{
+        left: 100%;
+        top: 100%;
+        transform: rotate(180deg);
+        background-color: rgb(247, 136, 9);
+    }
+    60%{
+        right: 100%;
+        transform: rotate(180deg);
+    }
+    80%{
+        top: 100%;
+        left: -20px;
+        transform: rotate(180deg);
+        background-color: green;
+    }
+    100%{
+        left: -20px;
+        top: -30px;
+        transform: rotate(360deg);
+    }
+}
+@media screen and (max-width:768px) {
+    @keyframes running {
+        0%{
+            left: -3px;
+            top: -30px;
+            transform: rotate(0deg);
+        }
+        20%{
+            left: 100%;
+            top: -30px;
+            transform: rotate(0deg);
+            
+        }
+        40%{
+            left: 100%;
+            top: 100%;
+            transform: rotate(180deg);
+        }
+        60%{
+            right: 100%;
+            transform: rotate(180deg);
+        }
+        80%{
+            top: 100%;
+            left: -3px;
+            transform: rotate(180deg);
+        }
+        100%{
+            left: -3px;
+            top: -30px;
+            transform: rotate(360deg);
+        }
+    }
+}
